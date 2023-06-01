@@ -1,27 +1,128 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+*{
+  margin: 0;
+  font-family:sans-serif;
+}
+.header{
+  flex:1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: orangered;
+  padding:20px 40px;
+}
+.header>.logo>h1{
+  color:white;
+}
+.header>.search{
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+}
+.header>.links{
+  display: flex;
+  justify-content: center;
+  gap:20px;
+}
+.links>a{
+  color:white;
+  text-decoration: none;
+}
+/* banner components */
+.banner{
+  background-color: yellow;
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  gap:20px;
+  flex-direction: column;
+  text-align: center;
+}
+.title{
+  font-size: 100px;
+  width:80%;
+  font-weight: bolder;
+}
+.big_btn{
+  background-color: black;
+  padding: 20px 40px;
+  color:white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bolder;
+  border-radius: 50px;
+}
+.big_btn:hover{
+  background-color: rgb(41, 41, 41);
+}
+.container{
+  display: flex;
+  padding:20px;
+  gap:20px;
+  justify-content: space-around;
+  height: auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.container>.card{
+  flex:1;
+  padding:10px;
+  border-radius: 5px;
+  box-shadow: 2px 3px 1px lightgray;
+}
+.card>h2{
+  color:white;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.card>p{
+  color:white;
+  line-height:26px;
+  text-align: justify;
+  font-weight: bold;
+}
+.end{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.end>a{
+  text-decoration: none;
+  color:white;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: black; 
+  padding:15px 20px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* footer  */
+
+.footer{
+  flex:1;
+  display: flex;
+  padding:20px 10%;
+  justify-content: center;
+  background-color: black;
+}
+.list{
+  flex:1;
+}
+.list>ul>li>a{
+  color:rgb(155, 155, 155);
+  text-decoration: none;
+}
+ul>li>a:hover{
+  text-decoration: underline;
+}
+
+.list>ul{
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+}
+/* credit */
+.credit{
+  display: flex;
+  flex:1;
+  color:grey;
+  justify-content: center;
+  padding:10px;
 }
